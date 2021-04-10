@@ -1,5 +1,32 @@
-.centrar
-{
-        text-align: center;
-        
+.centrar {
+  text-align: center;
+}
+/* Estilos generales */
+img {
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+.nav-link,
+.footer-link {
+  border: 2px solid transparent;
+  text-decoration: none;
+  color: #000;
+  transition: all 300ms;
+}
+.nav-link:hover,
+.footer-link:hover {
+  color: #000;
+  border-bottom: 2px solid rgb(220, 77, 65);
+}
+.card img {
+  max-height: 250px;
+  object-fit: cover;
+}
+#animales {
+  gap: 20px;
+  box-sizing: border-box;
 }
