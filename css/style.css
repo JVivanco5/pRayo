@@ -1,5 +1,7 @@
 .centrar {
   text-align: center;
+  border: 1px dotted #000;
+  padding: 8px;
 }
 /* Estilos generales */
 img {
