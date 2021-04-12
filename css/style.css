@@ -32,3 +32,9 @@ ul {
   gap: 20px;
   box-sizing: border-box;
 }
+/* colores*/
+
+body {
+  background-color:Azure;
+  color:#000;
+}
