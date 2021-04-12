@@ -41,7 +41,7 @@ ul {
 /* colores y letras */
 
 body {
-  background-color:RoyalBlue;
+  background-color:PowderBlue;
 }
 h1 {
   font-family: "Arial Black";
@@ -53,5 +53,5 @@ h5 {
 }
 p{
   font-family: verdana;
-  color:white;
+  color:black;
 }
