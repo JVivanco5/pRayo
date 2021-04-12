@@ -32,9 +32,17 @@ ul {
   gap: 20px;
   box-sizing: border-box;
 }
-/* colores*/
+/* colores y letras */
 
 body {
   background-color:Azure;
+}
+h1,h5 {
+  font-family: "Arial Black";
+  color:#000;
+}
+
+p{
+  font-family: verdana;
   color:#000;
 }
