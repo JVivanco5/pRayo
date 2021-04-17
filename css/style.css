@@ -1,3 +1,13 @@
+html {
+  background-color: MediumTurquoise;
+}
+header { 
+  position: fixed;
+  background-color: #ffff00;
+  height: 60px; 
+  width: 1498px;
+
+ }
 .centrar {
   text-align: center;
   border: 1px dotted #000;
@@ -46,12 +56,29 @@ body {
 h1 {
   font-family: "Arial Black";
   color:Snow;
+  text-align: center;
+  
+}
+h3 {
+  color:MediumTurquoise ;
 }
 h5 {
+  text-align: center;
   font-family: verdana;
   color:Snow ;
+  background: DarkCyan;  
 }
 p{
   font-family: verdana;
   color:black;
 }
+
+
+/*creacion capas*/
+#capa1{ position:absolute;
+  z-index:1;
+}
+#capa2{ position:absolute;
+  z-index: 0;
+}
+/**/
