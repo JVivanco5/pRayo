@@ -1,6 +1,12 @@
 html {
   background-color: MediumTurquoise;
 }
+header { 
+  position: fixed;
+  background-color: lightgray;
+  width:100%;
+  
+
  
  }
 .centrar {
@@ -9,6 +15,7 @@ html {
   padding: 8px;
   
 }
+/* Estilos generales */
 img {
   cursor: pointer;
 }
@@ -36,6 +43,12 @@ ul {
   max-height: 250px;
   object-fit: cover;
   
+}
+#animales {
+  gap: 20px;
+  box-sizing: border-box;
+  
+}
 /* colores y letras */
 
 body {
