@@ -88,9 +88,20 @@ h6 {
   font-family: georgia;
   font-size: 30px;
   color:Snow ;
-  background: blue; 
+
 }
 
 #lnd{ border:solid 1px black;
   box-shadow: 1px 2px 6px rgba(0,0,0,1.5);
+}  
+.resultado{
+margin-top: 15px;
+background:rgba(0,0,0,0.3); 
+}
+#enviar{
+
+width: 50%;
+margin: 0 auto;
+margin-top: 15px;
+
 }
