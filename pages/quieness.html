@@ -6,6 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="/icons/logo.png" />
     <title>¿Quienes somos?</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+ 
+    $(document).ready(function(){
+        $("#msg").hide();
+        $("#PedirClima").click(function(){
+ 
+ 
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(showPosition);
+                } else { 
+                    console.log("Geolocation is not supported by this browser.");
+            }
+        })
+        function showPosition(position) {
+            //console.log("Latitude: " + position.coords.latitude + " Longitude: " + position.coords.longitude);
+            var lat = position.coords.latitude;
+            var lon = position.coords.longitude;
+            var urlBase = "https://www.metaweather.com/api/location/search/?lattlong="
+            var urlFormateada = `${urlBase}${lat},${lon}`;
+            console.log(urlFormateada);
+            $.get(urlFormateada,function(Listadelugares){
+                var urlWoeid = "https://www.metaweather.com/api/location/".concat(Listadelugares[0].woeid);
+                console.log(Listadelugares[0].woeid)
+                console.log(urlWoeid)
+                $.get(urlWoeid,function(tiempo){
+                    console.log(tiempo.consolidated_weather[0])
+                    var maxTemp = Math.round(tiempo.consolidated_weather[0].the_temp)
+                    console.log(maxTemp)
+                    //weather_state_abbr
+                    var urlIcono = 
+"https://www.metaweather.com/".concat("/static/img/weather/ico/"+tiempo.consolidated_weather[0].weather_state_abbr+".ico")
+                    console.log(urlIcono)
+                    var mensaje = `<div><img src="${urlIcono}">${maxTemp}°C</div>`
+                    $("#Mensaje").append(mensaje);
+                })
+            })
+            //$("#msg").show();
+            //$("#Mensaje").append(mensaje);
+ 
+    }
+    })
+ 
+ 
+ 
+    </script>
 </head>
 <body>
     <!DOCTYPE html>
@@ -53,6 +99,10 @@
                   <a class="nav-link" href="../pages/login.html">Iniciar Sesion</a>
               </li>
               </li>
+              <button id="PedirClima" class="btn btn-dark">Pedir Clima</button>
+              <div id="Mensaje">
+         
+              </div>
 
 
           </div>
